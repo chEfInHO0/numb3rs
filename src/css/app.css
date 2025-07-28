@@ -1,0 +1,151 @@
+.app {
+  height: auto;
+  h4 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  p {
+    width: 55ch;
+    padding: 0.5rem;
+  }
+  form {
+    .wrapper {
+      max-width: 40vw;
+      display: flex;
+      justify-content: start;
+      gap: 2rem;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+    label {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      padding: 0;
+    }
+    input {
+      text-align: center;
+      background-color: #111012;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      min-height: 70px;
+      max-width: 120px;
+      font-size: 18px;
+      outline: none;
+    }
+    .box {
+      margin-top: 2rem;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      input[type='checkbox'] {
+        justify-self: start;
+        align-self: start;
+      }
+    }
+  }
+}
+
+.wrapper .switch {
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.15rem;
+  transition: all 0.3s;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.wrapper .switch .toggle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.bg {
+  background-image: linear-gradient(to left, #d586e0, #91a1fa);
+}
+
+@media (max-width: 1180px) {
+  .app {
+    max-width: 80%;
+    form {
+      .wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .app {
+    margin-top: 2rem;
+    h4 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    form {
+      .wrapper {
+        flex-direction: row;
+      }
+      input {
+        max-width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .app {
+    h4 {
+      font-size: 0.9rem;
+    }
+    p {
+      font-size: 0.6rem;
+    }
+    form {
+      .wrapper {
+        flex-direction: row;
+      }
+      label {
+        font-size: 0.9rem;
+      }
+      input {
+        max-width: 50px;
+      }
+    }
+  }
+
+  .wrapper .switch {
+    width: 70px;
+  }
+}
+
+@media (max-width: 371px) {
+  form {
+    .wrapper {
+      flex-direction: row;
+    }
+    input {
+      max-width: 60px;
+    }
+  }
+}

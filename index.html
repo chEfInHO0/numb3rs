@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="./src/img/logo.png" alt="project logo"><span>NUMB3RS</span>
+            </div>
+        </header>
+        <main>
+            <i>ONLINE - GRATUITO</i>
+            <div class="wrapper">
+                <div class="info">
+                    <h1>SORTEADOR DE NÚMEROS</h1>
+                    <div class="qna">
+                        <div class="question">
+                            <p>
+                                <img src="./src/img/info.png" alt="info icon">
+                                Como funciona o sorteador de números?
+                            </p>
+                            <p>
+                                O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do
+                                intervalo
+                                especificado pelo usuário.
+                            </p>
+                        </div>
+                        <div class="question">
+                            <p>
+                                <img src="./src/img/info.png" alt="info icon">
+                                Posso escolher o intervalo dos números?
+                            </p>
+                            <p>
+                                Sim, você pode definir os valores mínimo e máximo para o intervalo dos números
+                                sorteados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app none">
+                    <h4>Quero sortear:</h4>
+                    <p>
+                        defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela.
+                        É
+                        rápido
+                        e fácil!
+                    </p>
+                    <form>
+                        <div class="wrapper">
+                            <div class="wrapper">
+                                <label for="raffle">NÚMEROS
+                                </label>
+                                <input type="text" name="raffle" id="raffle" step="1" min="1" required
+                                    autocomplete="off">
+                            </div>
+                            <div class="wrapper">
+                                <label for="min">INICIO
+                                </label>
+                                <input type="text" name="min" id="min" step="1" min="1" required autocomplete="off">
+                            </div>
+                            <div class="wrapper">
+                                <label for="max">FIM
+                                </label>
+                                <input type="text" name="max" id="max" step="1" min="1" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="wrapper">
+                                <div class="switch">
+                                    <div class="toggle"></div>
+                                </div>
+                                Não repetir números
+                            </div>
+                            <input id="btn" type="submit" value="sortear">
+                        </div>
+                    </form>
+                    <div class="msg hide">"</div>
+                </div>
+                <div class="result ">
+                    <div class="wrapper">
+                        <h2>Resultado do Sorteio</h2>
+                        <span id="count">Resultado</span>
+                        <div class="numbers">
+
+                        </div>
+                        <button id="reset" class="btn">Sortear Novamente</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>Desenvolvido com <a href="https://github.com/chEfInHO0">❤</a> por Luccas Elias</footer>
+    </div>
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
