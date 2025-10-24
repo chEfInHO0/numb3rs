@@ -25,6 +25,7 @@ function clearMessage() {
 }
 
 export function generateNumbers() {
+    // TODO desenvolver uma lógica mais otimizada, testar um switch case no futuro
     if (matchRequirements()) {
         const selected = []
         while (selected.length !== +raffle.value) {
