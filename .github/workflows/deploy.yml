@@ -19,8 +19,24 @@ jobs:
           username: ${{secrets.EC2_USER}}
           key: ${{secrets.EC2_SSH_KEY}}
           script: |
-            cd /var/www/html/
+            CD_PATH="/var/www/html"
+            REPO_URL="https://github.com/chEfInHO0/numb3rs.git"
 
-            sudo git pull origin main
+            # 1. Checa se o diretório de deploy existe e se é um repositório Git
+            if [ ! -d "$CD_PATH" ] || [ ! -d "$CD_PATH/.git" ]; then
+              echo "Diretório não existe ou não é um repositório Git. Clonando..."
+              
+              # 2. Se for a primeira vez, ele remove a pasta velha e clona
+              sudo rm -rf $CD_PATH
+              cd /var/www/
+              sudo git clone $REPO_URL html
+              
+            else
+              echo "Repositório existente. Puxando alterações..."
+              # 3. Se o repositório existe, ele navega e faz o pull
+              cd $CD_PATH
+              sudo git pull origin main
+            fi
 
+            # 4. Garante que as permissões estejam corretas no final
             sudo chown -R www-data:www-data /var/www/html
