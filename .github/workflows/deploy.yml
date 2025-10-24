@@ -21,6 +21,6 @@ jobs:
           script: |
             cd /var/www/html/
 
-            sudo apt pull origin main
+            sudo git pull origin main
 
-            sudo chown -R apache:apache /var/www/html
+            sudo chown -R www-data:www-data /var/www/html
